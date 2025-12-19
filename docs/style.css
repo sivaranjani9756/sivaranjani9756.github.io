@@ -1,11 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #000;
   color: #fff;
 }
@@ -14,98 +9,35 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 80px;
+  padding: 20px 40px;
+  background: #000;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-nav a {
-  color: white;
-  margin-left: 30px;
+header a {
+  color: #fff;
+  margin-left: 20px;
   text-decoration: none;
-}
-
-nav a:hover {
-  color: #f9c74f;
-}
-
-/* HERO */
-.hero {
-  padding: 120px 80px;
-}
-
-.hello {
-  color: #f9c74f;
-  letter-spacing: 2px;
-}
-
-.hero h1 {
-  font-size: 60px;
-  margin: 15px 0;
-}
-
-.hero span {
-  color: #f9c74f;
-}
-
-.hero h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.role {
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.buttons .btn {
-  display: inline-block;
-  padding: 12px 30px;
-  margin-right: 15px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-}
-
-.buttons .outline {
-  border-color: #f9c74f;
-}
-
-.buttons .btn:hover {
-  background-color: #f9c74f;
-  color: black;
 }
 
 /* SECTIONS */
 section {
-  padding: 80px;
+  padding: 60px 40px;
 }
 
-h2 {
-  color: #f9c74f;
-  margin-bottom: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
+/* PROJECTS */
+#projects {
+  margin-top: 40px;
 }
 
 .project {
-  margin-bottom: 30px;
-  padding: 15px;
-  overflow: visible;  
-  height: auto;       
+  margin-bottom: 35px;
 }
 
 .project img {
+  display: block;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
-  display: block !important;
   margin: 12px 0;
   border-radius: 10px;
 }
@@ -113,5 +45,9 @@ ul li {
 .project a {
   text-decoration: none;
   color: inherit;
-  display: block;
+}
+
+/* TITLES */
+h2 {
+  color: #f5b400;
 }
