@@ -33,7 +33,7 @@ nav a {
 
 /* ================= HERO ================= */
 .hero {
-  padding: 80px 40px;
+  padding: 100px 40px;
 }
 
 .hero .hello {
@@ -41,44 +41,58 @@ nav a {
   letter-spacing: 2px;
 }
 
+.hero h1 {
+  font-size: 48px;
+}
+
 .hero h1 span {
   color: #f5c542;
 }
 
+.hero h2 {
+  color: #f5c542;
+}
+
+.role {
+  margin-top: 10px;
+  color: #ccc;
+}
+
 .buttons {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 12px 22px;
   background: #f5c542;
   color: #000;
-  margin-right: 10px;
-  border-radius: 4px;
+  margin-right: 12px;
+  border-radius: 30px;
   font-weight: bold;
 }
 
 .btn.outline {
   background: transparent;
   color: #f5c542;
-  border: 1px solid #f5c542;
+  border: 2px solid #f5c542;
 }
 
 /* ================= SECTIONS ================= */
 section {
-  padding: 60px 40px;
+  padding: 80px 40px;
 }
 
 section h2 {
   color: #f5c542;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 32px;
 }
 
 /* ================= ABOUT ================= */
 .about-section {
   background-color: #000;
-  padding: 80px 10%;
+  padding: 100px 10%;
 }
 
 .about-container {
@@ -93,7 +107,7 @@ section h2 {
 
 .profile-img {
   width: 180px;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
@@ -142,11 +156,40 @@ section h2 {
   margin-bottom: 10px;
 }
 
+.about-details ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about-details ul li {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 6px;
+}
+
+/* ================= LINKEDIN BUTTON ================= */
+.about-linkedin {
+  margin-top: 30px;
+}
+
+.about-linkedin a {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #f5c542;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  letter-spacing: 1px;
+}
+
+.about-linkedin a:hover {
+  background-color: #e0b635;
+}
+
 /* ================= EXPERIENCE ================= */
 .experience-section {
   background-color: #000;
-  padding: 80px 10%;
-  color: #fff;
+  padding: 100px 10%;
 }
 
 .section-title {
@@ -202,30 +245,19 @@ section h2 {
   color: #ccc;
 }
 
-/* ================= SKILLS ================= */
-#skills ul {
-  list-style: square;
-  padding-left: 20px;
-}
-
 /* ================= PROJECTS ================= */
 .project {
   margin-bottom: 40px;
 }
 
-.project img {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  margin: 12px 0;
-  border-radius: 10px;
-  border: 1px solid #333;
+.project h3 {
+  color: #f5c542;
 }
 
 /* ================= CONTACT ================= */
 .contact-section {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .contact-details {
@@ -238,22 +270,26 @@ section h2 {
 
 .contact-item h4 {
   margin-bottom: 8px;
-  color: #f4b400;
+  color: #f5c542;
 }
 
 .contact-item p,
 .contact-item a {
   color: #ffffff;
-  text-decoration: none;
   font-size: 15px;
 }
 
 .contact-item a:hover {
-  color: #f4b400;
+  color: #f5c542;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .about-container {
     flex-direction: column;
   }
@@ -263,8 +299,7 @@ section h2 {
     width: 100%;
   }
 
-  header {
-    flex-direction: column;
-    gap: 15px;
+  .hero h1 {
+    font-size: 36px;
   }
 }
