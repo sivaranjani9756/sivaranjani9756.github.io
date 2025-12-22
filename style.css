@@ -245,6 +245,58 @@ section h2 {
   color: #ccc;
 }
 
+/* ================= EDUCATION ================= */
+.education-section {
+  background-color: #000;
+  padding: 80px 10%;
+  color: #fff;
+}
+
+.education-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.education-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+}
+
+.edu-year {
+  color: #f5c542;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.education-card h3 {
+  margin: 10px 0 6px;
+}
+
+.education-card h4 {
+  color: #ccc;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+
+.edu-college {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.edu-score {
+  color: #ddd;
+}
+
 /* ================= PROJECTS ================= */
 .projects-section {
   padding: 100px 10%;
