@@ -1,4 +1,8 @@
 /* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,6 +13,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ================= HEADER ================= */
@@ -89,11 +99,9 @@ section h2 {
   font-size: 32px;
 }
 
-/* ================= ABOUT SECTION (FINAL FIX) ================= */
-
+/* ================= ABOUT SECTION ================= */
 .about-section {
   min-height: 100vh;
-  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,18 +114,15 @@ section h2 {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 80px;
-  box-sizing: border-box;
 }
 
-/* LEFT COLUMN */
+/* LEFT */
 .about-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-sizing: border-box;
 }
 
-/* PROFILE IMAGE */
 .profile-img {
   width: 160px;
   height: 200px;
@@ -126,11 +131,10 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* BASIC INFO */
 .about-info {
   list-style: none;
   padding: 0;
-  margin: 0 0 25px 0;
+  margin-bottom: 25px;
 }
 
 .about-info li {
@@ -146,7 +150,6 @@ section h2 {
 .skills p {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   font-size: 14px;
   margin: 14px 0 6px;
 }
@@ -165,14 +168,9 @@ section h2 {
   background: #f5c542;
 }
 
-/* RIGHT COLUMN */
-.about-right {
-  box-sizing: border-box;
-}
-
+/* RIGHT */
 .about-right h2 {
   font-size: 48px;
-  color: #f5c542;
   margin-bottom: 20px;
 }
 
@@ -189,7 +187,6 @@ section h2 {
   margin-bottom: 6px;
 }
 
-/* LINKEDIN BUTTON */
 .about-linkedin a {
   display: inline-block;
   margin-top: 20px;
@@ -198,35 +195,11 @@ section h2 {
   color: #000;
   font-weight: 600;
   border-radius: 30px;
-  text-decoration: none;
 }
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .about-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .about-left {
-    align-items: center;
-  }
-}
-
 
 /* ================= EXPERIENCE ================= */
 .experience-section {
-  background-color: #000;
   padding: 100px 10%;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
-  border-bottom: 2px solid #f5c542;
-  display: inline-block;
-  padding-bottom: 10px;
 }
 
 .experience-container {
@@ -254,30 +227,9 @@ section h2 {
   font-weight: bold;
 }
 
-.experience-card h3 {
-  margin: 10px 0 5px;
-}
-
-.experience-card h4 {
-  color: #aaa;
-  font-weight: normal;
-  margin-bottom: 15px;
-}
-
-.experience-card ul {
-  padding-left: 20px;
-}
-
-.experience-card ul li {
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
 /* ================= EDUCATION ================= */
 .education-section {
-  background-color: #000;
   padding: 80px 10%;
-  color: #fff;
 }
 
 .education-container {
@@ -293,49 +245,11 @@ section h2 {
   border-radius: 12px;
   width: 420px;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  transition: transform 0.3s ease;
-}
-
-.education-card:hover {
-  transform: translateY(-8px);
-}
-
-.edu-year {
-  color: #f5c542;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.education-card h3 {
-  margin: 10px 0 6px;
-}
-
-.education-card h4 {
-  color: #ccc;
-  font-weight: normal;
-  margin-bottom: 12px;
-}
-
-.edu-college {
-  color: #aaa;
-  margin-bottom: 10px;
-}
-
-.edu-score {
-  color: #ddd;
 }
 
 /* ================= PROJECTS ================= */
 .projects-section {
   padding: 100px 10%;
-  background-color: #000;
-}
-
-.projects-section h2 {
-  color: #f5c542;
-  font-size: 36px;
-  margin-bottom: 50px;
-  text-align: left;
 }
 
 .projects-grid {
@@ -362,27 +276,6 @@ section h2 {
   object-fit: cover;
 }
 
-.project-card h3 {
-  color: #fff;
-  font-size: 18px;
-  margin: 15px;
-}
-
-.project-card p {
-  color: #ccc;
-  font-size: 14px;
-  margin: 0 15px 15px;
-  line-height: 1.6;
-}
-
-.project-card a {
-  display: inline-block;
-  margin: 0 15px 20px;
-  color: #f5c542;
-  font-weight: bold;
-}
-
-
 /* ================= CONTACT ================= */
 .contact-section {
   text-align: center;
@@ -394,22 +287,6 @@ section h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  margin-top: 30px;
-}
-
-.contact-item h4 {
-  margin-bottom: 8px;
-  color: #f5c542;
-}
-
-.contact-item p,
-.contact-item a {
-  color: #ffffff;
-  font-size: 15px;
-}
-
-.contact-item a:hover {
-  color: #f5c542;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -420,37 +297,15 @@ section h2 {
   }
 
   .about-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .about-left,
-  .about-right {
-    width: 100%;
+  .about-left {
+    align-items: center;
   }
 
   .hero h1 {
     font-size: 36px;
   }
 }
-/* ===== FIX PROJECT IMAGE SIZE ===== */
-.project-card img {
-  width: 100%;
-  height: 180px;          /* controls image height */
-  object-fit: cover;     /* prevents stretching */
-  display: block;
-  background-color: #111;
-}
-.about-section {
-  display: flex;
-  justify-content: center;
-  padding: 80px 20px;
-}
-
-.about-container {
-  width: 100%;
-  max-width: 1200px;   /* ⬅️ THIS FIXES FULL-WIDTH ISSUE */
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 80px;
-}
-
