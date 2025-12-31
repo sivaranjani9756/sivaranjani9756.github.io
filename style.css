@@ -91,100 +91,102 @@ section h2 {
 
 /* ================= ABOUT ================= */
 .about-section {
-  background-color: #000;
-  padding: 100px 10%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  padding: 60px 20px;
+  background: #000;          /* matches dark theme */
 }
 
 .about-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr; /* left smaller, right larger */
   gap: 60px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
 }
 
+/* LEFT SIDE */
 .about-left {
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
 }
 
 .profile-img {
   width: 180px;
-  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
   margin-bottom: 20px;
 }
 
 .about-info {
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
+  margin: 0 0 25px 0;
+  width: 100%;
 }
 
 .about-info li {
-  font-size: 14px;
   margin-bottom: 8px;
+  font-size: 14px;
 }
 
+/* SKILLS */
 .skills p {
-  font-size: 13px;
-  margin: 14px 0 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 12px 0 5px;
 }
 
 .bar {
   background: #333;
   height: 6px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .bar span {
   display: block;
-  height: 6px;
-  background: #f5c542;
-  border-radius: 5px;
+  height: 100%;
+  background: #f5b400;   /* yellow accent */
+  border-radius: 10px;
 }
 
-.about-right {
-  width: 55%;
+/* RIGHT SIDE */
+.about-right h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .about-text {
   font-size: 15px;
   line-height: 1.7;
-  color: #ccc;
   margin-bottom: 25px;
-}
-
-.about-details p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.about-details ul {
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
-
-.about-details ul li {
-  font-size: 14px;
   color: #ccc;
+}
+
+.about-details p,
+.about-details li {
+  font-size: 14px;
   margin-bottom: 6px;
 }
 
-/* ================= LINKEDIN BUTTON ================= */
-.about-linkedin {
-  margin-top: 30px;
-}
-
+/* LINKEDIN BUTTON */
 .about-linkedin a {
   display: inline-block;
-  padding: 12px 30px;
-  background-color: #f5c542;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: #f5b400;
   color: #000;
-  font-weight: bold;
-  border-radius: 30px;
-  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
 }
 
-.about-linkedin a:hover {
-  background-color: #e0b635;
-}
 
 /* ================= EXPERIENCE ================= */
 .experience-section {
