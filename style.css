@@ -89,9 +89,9 @@ section h2 {
   font-size: 32px;
 }
 
-/* ===== ABOUT SECTION ===== */
+/* ================= ABOUT SECTION (FINAL FIX) ================= */
 
-.about {
+.about-section {
   min-height: 100vh;
   background: #000;
   display: flex;
@@ -100,30 +100,40 @@ section h2 {
   padding: 80px 20px;
 }
 
-.about-wrapper {
-  max-width: 1200px;
+.about-container {
   width: 100%;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 80px;
+  box-sizing: border-box;
 }
 
-/* LEFT */
+/* LEFT COLUMN */
 .about-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
-.about-img {
-  width: 180px;
-  height: 180px;
+/* PROFILE IMAGE */
+.profile-img {
+  width: 160px;
+  height: 200px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 20px;
 }
 
-.about-basic p {
+/* BASIC INFO */
+.about-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.about-info li {
   font-size: 14px;
   margin-bottom: 6px;
 }
@@ -131,57 +141,60 @@ section h2 {
 /* SKILLS */
 .skills {
   width: 100%;
-  margin-top: 20px;
 }
 
 .skills p {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 14px;
   margin: 14px 0 6px;
 }
 
-.skill-bar {
+.bar {
   width: 100%;
   height: 6px;
   background: #333;
   border-radius: 10px;
+  overflow: hidden;
 }
 
-.skill-bar span {
+.bar span {
   display: block;
   height: 100%;
-  background: #f5b400;
-  border-radius: 10px;
+  background: #f5c542;
 }
 
-/* RIGHT */
+/* RIGHT COLUMN */
+.about-right {
+  box-sizing: border-box;
+}
+
 .about-right h2 {
   font-size: 48px;
-  color: #fff;
+  color: #f5c542;
   margin-bottom: 20px;
 }
 
-.about-desc {
+.about-text {
   font-size: 15px;
   color: #ccc;
   line-height: 1.7;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-.about-info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px 40px;
+.about-details p,
+.about-details li {
   font-size: 14px;
-  margin-bottom: 30px;
+  margin-bottom: 6px;
 }
 
-/* BUTTON */
-.about-btn {
+/* LINKEDIN BUTTON */
+.about-linkedin a {
   display: inline-block;
+  margin-top: 20px;
   padding: 10px 26px;
-  background: #f5b400;
+  background: #f5c542;
   color: #000;
   font-weight: 600;
   border-radius: 30px;
@@ -190,7 +203,7 @@ section h2 {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .about-wrapper {
+  .about-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
@@ -199,6 +212,7 @@ section h2 {
     align-items: center;
   }
 }
+
 
 /* ================= EXPERIENCE ================= */
 .experience-section {
@@ -425,5 +439,18 @@ section h2 {
   object-fit: cover;     /* prevents stretching */
   display: block;
   background-color: #111;
+}
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;   /* ⬅️ THIS FIXES FULL-WIDTH ISSUE */
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
 }
 
